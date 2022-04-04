@@ -14,12 +14,16 @@
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
   <script type="text/babel">
     const root = document.getElementById("root");
+
     const App = () => {
-      const [counter, modifier] = React.useState(0); // 배열 요소에 이름 부여, 0번째 요소인 data는 counter, 1번째 요소인 함수는 modifier로 부름
+      const [counter, setCounter] = React.useState(0); // 배열 요소에 이름 부여, 0번째 요소인 data는 counter, 1번째 요소인 함수는 modifier로 부름
+      const onClick = () => {
+        setCounter(counter + 1);
+      };
       return (
         <div>
           <h3>Total clicks: {counter}</h3>
-          <button>Click me</button>
+          <button onClick={onClick}>Click me</button>
         </div>
       );
     };
