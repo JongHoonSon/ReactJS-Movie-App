@@ -20,9 +20,9 @@
       render();
     }
     function render() {
-      ReactDOM.render(<Container />, root);
+      ReactDOM.render(<App />, root);
     }
-    const Container = () => (
+    const App = () => (
       <div>
         <h3>Total clicks: {counter}</h3>
         <button onClick={countUp}>Click me</button>
