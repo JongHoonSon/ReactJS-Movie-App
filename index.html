@@ -16,15 +16,13 @@
     const root = document.getElementById("root");
 
     const App = () => {
-      const [counter, setCounter] = React.useState(0); // 배열 요소에 이름 부여, 0번째 요소인 data는 counter, 1번째 요소인 함수는 modifier로 부름
-      const onClick = () => {
-        // setCounter(counter + 1);
-        setCounter((current) => current + 1);
-      };
       return (
         <div>
-          <h3>Total clicks: {counter}</h3>
-          <button onClick={onClick}>Click me</button>
+          <h1 className="">Super Converter</h1>
+          <label htmlFor="minutes">Minutes</label>
+          <input id="minutes" placeholder="Minutes" type="number" />
+          <label htmlFor="minutes">Hours</label>
+          <input id="hours" placeholder="Hours" type="number" />
         </div>
       );
     };
