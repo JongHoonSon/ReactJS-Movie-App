@@ -6,7 +6,11 @@ function MovieDetail({ title, rating, cover, year, desc, genres }) {
     <div className={styles.wrapper}>
       <div className={styles.title}>
         <h1>{title}</h1>
-        <h2>{`(${rating} / 10)`}</h2>
+        <h2 className={styles.rating}>
+          {rating.toString().length === 1
+            ? `( ${rating}.0 / 10 )`
+            : `( ${rating} / 10 )`}
+        </h2>
       </div>
       <div className={styles.contents_wrapper}>
         <div>
