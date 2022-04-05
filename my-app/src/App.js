@@ -2,31 +2,21 @@ import Button from "./Button";
 import styles from "./App.module.css";
 import { useState, useEffect } from "react";
 
-function App() {
-  const [counter, setValue] = useState(0);
-  const [keyword, setKeyword] = useState("");
-  const onClick = () => setValue((prev) => prev + 1);
-  const onChange = (event) => setKeyword(event.target.value);
-  console.log("i run all the time");
+function Hello() {
   useEffect(() => {
-    console.log("CALL THE API..");
+    console.log("created :)"); // 한 번 실행
+    return () => console.log("destroyed :("); // Hello 컴포넌트가 사라질 때 사용
   }, []);
-  useEffect(() => {
-    console.log("I run when 'keyword' changes.");
-  }, [keyword]);
-  useEffect(() => {
-    console.log("I run when 'counter' changes.");
-  }, [counter]);
+  return <h1>Hello</h1>;
+}
+
+function App() {
+  const [showing, setShowing] = useState(false);
+  const onClick = () => setShowing((prev) => !prev);
   return (
     <div>
-      <input
-        value={keyword}
-        onChange={onChange}
-        type="text"
-        placeholder="Search here..."
-      />
-      <h1>{counter}</h1>
-      <button onClick={onClick}>click me</button>
+      <button onClick={onClick}>{showing ? "Hide" : "Show"}</button>
+      {showing ? <Hello /> : null}
     </div>
   );
 }
