@@ -1,0 +1,51 @@
+.title {
+  color: #ffa600d3;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10 20px;
+  margin-left: 50px;
+}
+
+.title h2 {
+  margin-left: 20px;
+  font-size: 20px;
+}
+
+.contents_wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.cover {
+  padding: 0px 20px;
+}
+
+.year {
+  margin-top: 5px;
+  text-align: center;
+}
+
+.description {
+  margin-left: 20px;
+  padding: 0 20px;
+}
+
+.genres {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+
+.genres li {
+  color: rgba(255, 0, 0, 0.9);
+  text-transform: uppercase;
+  font-weight: 600px;
+  padding: 0px 20px;
+  font-size: 16px;
+}

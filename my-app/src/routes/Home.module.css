@@ -1,13 +1,7 @@
-body {
-  padding: 0px;
-  margin: 0px;
-}
-
 .container {
   height: 100%;
   display: flex;
   justify-content: center;
-  background-color: rgb(15, 21, 78);
 }
 
 .loader {
@@ -16,7 +10,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-weight: 300;
+  font-weight: 600;
+  font-size: 32px;
+  color: white;
+  font-style: italic;
 }
 
 .movies {
