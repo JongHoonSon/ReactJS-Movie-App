@@ -14,6 +14,7 @@
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
   <script type="text/babel">
     function Btn({ banana, changeValue }) {
+      console.log(banana + " was rendered");
       return (
         <button
           onClick={changeValue}
@@ -29,13 +30,14 @@
         </button>
       );
     }
+    const MemorizedBtn = React.memo(Btn);
     const App = () => {
       const [value, setValue] = React.useState("Save Changes");
       const changeValue = () => setValue("Revert Changes");
       return (
         <div>
-          <Btn banana={value} changeValue={changeValue} />
-          <Btn banana="Continue" />
+          <MemorizedBtn banana={value} changeValue={changeValue} />
+          <MemorizedBtn banana="Continue" />
         </div>
       );
     };
